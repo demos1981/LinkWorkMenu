@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { BLOGS_URL } from '../../../../../data/dataLink';
+
+
+import {getList} from '../../../../../data/dataServices';
+import CardTable from '../CardTable';
 
 function Soft() {
+
+  const [soft,setSoft] = useState([]);
+
+  useEffect(()=>{
+    getList(BLOGS_URL).then(setSoft);
+  },[]);
   return (
-    <div>Soft</div>
+    <CardTable props={soft}/>
   )
 }
 
