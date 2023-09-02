@@ -1,16 +1,17 @@
 
-import { MOCAPI_URL } from './dataLink';
+import { BLOGS_URL } from './dataLink';
  
 
 
-     export function getList(){
+     export async function getList(props){
 
-        return fetch (MOCAPI_URL).then((res)=>res.json());
+        const res = await fetch(props);
+         return await res.json();
         
     }
     
     export function createItem(item){
-        return fetch(MOCAPI_URL,{
+        return fetch(BLOGS_URL,{
             method:'POST',
             body:JSON.stringify(item),
             headers:{
@@ -20,7 +21,7 @@ import { MOCAPI_URL } from './dataLink';
     
     }
     export function updateItem(item){
-        return fetch(MOCAPI_URL + item.id,{
+        return fetch(BLOGS_URL + item.id,{
             method:'PUT',
             body:JSON.stringify(item),
             headers:{
@@ -30,7 +31,7 @@ import { MOCAPI_URL } from './dataLink';
     
     }
     export function deleteItem(id){
-        return fetch (MOCAPI_URL + id,{
+        return fetch (BLOGS_URL + id,{
             method:"DELETE",
         }).then((res)=>res.json());
     

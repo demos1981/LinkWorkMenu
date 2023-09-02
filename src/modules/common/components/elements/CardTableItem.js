@@ -2,7 +2,7 @@ import { Button, CardActions, CardContent, Typography } from '@mui/material'
 import React from 'react'
 
 
-function CardTableItem({blog:{logo,urls}}) {
+function CardTableItem({props:{logo,urls}}) {
   return (
     <>
     <CardContent >

@@ -9,14 +9,14 @@ import CardTableItem from './CardTableItem';
 
 
 
-function CardTable({blogs}) {
+function CardTable({props}) {
 
   return (
    
     <Card variant="outlined" sx={{ maxWidth: 230,marginTop:10,marginRight:5}}>
 
- {blogs.map((item)=>(
-  <CardTableItem key={item.id} blog={item}/>
+ {props.map((item)=>(
+  <CardTableItem key={item.id} props={item}/>
   ))} 
   
   </Card>

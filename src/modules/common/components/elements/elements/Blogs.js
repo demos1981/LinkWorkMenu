@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { BLOGS_URL } from '../../../../../data/dataLink';
 
 
 import {getList} from '../../../../../data/dataServices';
@@ -12,13 +13,13 @@ function Blogs() {
   const [blogs,setBlogs] = useState([]);
 
   useEffect(()=>{
-    getList().then(setBlogs);
+    getList(BLOGS_URL).then(setBlogs);
   },[]);
 
 
   
   return (
-    <CardTable blogs={blogs}/>
+    <CardTable props={blogs}/>
   )
 }
 
