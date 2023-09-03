@@ -1,0 +1,111 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "logo": "daiwa",
+      "urls": "https://daiwa.co.jp"
+    },{
+      "id":2,
+      "logo": "shimano",
+      "urls": "https://shimano.co.jp"
+
+    }
+  ],
+  "courses": [
+    {
+      "id": 3,
+      "logo": "tict",
+      "urls": "https://tict.co.jp"
+    },{
+      "id":4,
+      "logo": "graphiteleader",
+      "urls": "https://graphiteleader.co.jp"
+
+    }
+  ],
+  "develop": [
+    {
+      "id": 5,
+      "logo": "azura",
+      "urls": "https://azura.co.jp"
+    },{
+      "id":6,
+      "logo": "rapala",
+      "urls": "https://rapala.co.jp"
+
+    }
+  ],
+  "frameworks":[
+    {
+      "id": 7,
+      "logo": "sony",
+      "urls": "https://sony.co.jp"
+    },{
+      "id":8,
+      "logo": "ninja",
+      "urls": "https://ninja.co.jp"
+
+    }
+  ],
+  "management":[
+    {
+      "id": 9,
+      "logo": "samsung",
+      "urls": "https://samsung.co.jp"
+    },{
+      "id":10,
+      "logo": "nike",
+      "urls": "https://nike.co.jp"
+
+    }
+  ],
+  "media":[
+    {
+      "id": 11,
+      "logo": "stalker",
+      "urls": "https://stalker.co.jp"
+    },{
+      "id":12,
+      "logo": "born",
+      "urls": "https://born.co.jp"
+
+    }
+  ],
+  "skills":[
+    {
+      "id": 13,
+      "logo": "step",
+      "urls": "https://step.co.ua"
+    },{
+      "id":14,
+      "logo": "hillel",
+      "urls": "https://hillel.co.ua"
+
+    }
+  ],
+  "soft":[
+    {
+      "id": 15,
+      "logo": "windows",
+      "urls": "https://windows.co.usa"
+    },{
+      "id":16,
+      "logo": "linux",
+      "urls": "https://linux.co.usa"
+
+    }
+  ],
+  "text":[
+    {
+      "id": 17,
+      "logo": "warcraft",
+      "urls": "https://warcraft.co.usa"
+    },{
+      "id":18,
+      "logo": "startrek",
+      "urls": "https://startrek.co.usa"
+
+    }
+  ]
+  
+}

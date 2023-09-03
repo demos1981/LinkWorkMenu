@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BLOGS_URL } from '../../../../../data/dataLink';
+import { SOFT_URL } from '../../../../../data/dataLink';
 
 
 import {getList} from '../../../../../data/dataServices';
@@ -10,7 +10,7 @@ function Soft() {
   const [soft,setSoft] = useState([]);
 
   useEffect(()=>{
-    getList(BLOGS_URL).then(setSoft);
+    getList( SOFT_URL ).then(setSoft);
   },[]);
   return (
     <CardTable props={soft}/>

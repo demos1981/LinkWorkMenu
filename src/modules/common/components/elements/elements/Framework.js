@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BLOGS_URL } from '../../../../../data/dataLink';
+import { FRAMEWORK_URL } from '../../../../../data/dataLink';
 
 
 import {getList} from '../../../../../data/dataServices';
@@ -10,7 +10,7 @@ function Framework() {
   const [framework,setFrameworks] = useState([]);
 
   useEffect(()=>{
-    getList(BLOGS_URL).then(setFrameworks);
+    getList(FRAMEWORK_URL).then(setFrameworks);
   },[]);
 
   return (

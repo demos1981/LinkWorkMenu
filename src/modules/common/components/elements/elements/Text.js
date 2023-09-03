@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react'
-import { COURSES_URL } from '../../../../../data/dataLink';
+import { TEXT_URL } from '../../../../../data/dataLink';
 import CardTable from '../CardTable';
 import { getList } from '../../../../../data/dataServices';
 
@@ -9,7 +9,7 @@ function Text() {
 
 
   useEffect(()=>{
-    getList(COURSES_URL).then(setText);
+    getList(TEXT_URL).then(setText);
   },[]);
   return (
     <CardTable props={text}/>

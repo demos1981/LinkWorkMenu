@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BLOGS_URL } from '../../../../../data/dataLink';
+import { MEDIA_URL } from '../../../../../data/dataLink';
 
 
 import {getList} from '../../../../../data/dataServices';
@@ -10,7 +10,7 @@ function Media() {
    const [media,setMedia] = useState([]);
 
   useEffect(()=>{
-    getList(BLOGS_URL).then(setMedia);
+    getList(MEDIA_URL).then(setMedia);
   },[]);
   return (
      <CardTable props={media}/>

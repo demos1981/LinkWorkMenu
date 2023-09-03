@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { COURSES_URL } from '../../../../../data/dataLink';
+import { MANAGEMENT_URL} from '../../../../../data/dataLink';
 
 
 import {getList} from '../../../../../data/dataServices';
@@ -9,7 +9,7 @@ function Management() {
   const [management,setManagement] = useState([]);
 
   useEffect(()=>{
-    getList(COURSES_URL).then(setManagement);
+    getList( MANAGEMENT_URL).then(setManagement);
   },[]);
   return (
     <CardTable props={management}/>
