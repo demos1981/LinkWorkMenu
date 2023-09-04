@@ -16,4 +16,4 @@ function Text() {
   )
 }
 
-export default Text
+export default Text;

@@ -1,5 +1,5 @@
 
-import { BLOGS_URL } from './dataLink';
+
  
 
 
@@ -10,30 +10,33 @@ import { BLOGS_URL } from './dataLink';
         
     }
     
-    export function createItem(item){
-        return fetch(BLOGS_URL,{
-            method:'POST',
-            body:JSON.stringify(item),
-            headers:{
-                'Content-type':'application/json',
+    export async function createItem(item){
+        const res = await fetch(item, {
+            method: 'POST',
+            body: JSON.stringify(item),
+            headers: {
+                'Content-type': 'application/json',
             }
-        }).then((res)=>res.json());
+        });
+        return await res.json();
     
     }
-    export function updateItem(item){
-        return fetch(BLOGS_URL + item.id,{
-            method:'PUT',
-            body:JSON.stringify(item),
-            headers:{
-                'Content-type':'application/json',
+    export async function updateItem(item){
+        const res = await fetch(item + item.id, {
+            method: 'PUT',
+            body: JSON.stringify(item),
+            headers: {
+                'Content-type': 'application/json',
             }
-        }).then((res)=>res.json());
+        });
+        return await res.json();
     
     }
-    export function deleteItem(id){
-        return fetch (BLOGS_URL + id,{
-            method:"DELETE",
-        }).then((res)=>res.json());
+    export async function deleteItem(item){
+        const res = await fetch(item + item.id, {
+            method: "DELETE",
+        });
+        return await res.json();
     
     }
 

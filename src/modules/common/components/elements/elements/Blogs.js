@@ -1,20 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { BLOGS_URL } from '../../../../../data/dataLink';
+import React from 'react';
 
-
-import {getList} from '../../../../../data/dataServices';
 import CardTable from '../CardTable';
+import useBlogs from '../../../hooks/useBlogs';
 
 
 
 
 
 function Blogs() {
-  const [blogs,setBlogs] = useState([]);
-
-  useEffect(()=>{
-    getList(BLOGS_URL).then(setBlogs);
-  },[]);
+ const {blogs} = useBlogs();
 
 
   
