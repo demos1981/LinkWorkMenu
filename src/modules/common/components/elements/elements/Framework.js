@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { FRAMEWORK_URL } from '../../../../../data/dataLink';
+import React from 'react';
 
-
-import {getList} from '../../../../../data/dataServices';
 import CardTable from '../CardTable';
+import useFramework from '../../../hooks/useFramework';
 
 function Framework() {
-
-  const [framework,setFrameworks] = useState([]);
-
-  useEffect(()=>{
-    getList(FRAMEWORK_URL).then(setFrameworks);
-  },[]);
+const {framework} = useFramework();
+ 
 
   return (
     <CardTable props={framework}/>

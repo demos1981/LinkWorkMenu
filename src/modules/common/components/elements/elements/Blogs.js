@@ -1,5 +1,4 @@
 import React from 'react';
-
 import CardTable from '../CardTable';
 import useBlogs from '../../../hooks/useBlogs';
 

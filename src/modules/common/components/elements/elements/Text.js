@@ -1,16 +1,14 @@
-import React,{useState, useEffect} from 'react'
-import { TEXT_URL } from '../../../../../data/dataLink';
+import React from 'react'
 import CardTable from '../CardTable';
-import { getList } from '../../../../../data/dataServices';
+import useText from '../../../hooks/useText';
+
+
 
 function Text() {
+const {text} = useText();
 
-  const [text,setText] = useState([]);
 
 
-  useEffect(()=>{
-    getList(TEXT_URL).then(setText);
-  },[]);
   return (
     <CardTable props={text}/>
   )

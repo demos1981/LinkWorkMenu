@@ -1,15 +1,10 @@
-import React,{useState, useEffect} from 'react'
-import { COURSES_URL } from '../../../../../data/dataLink';
+import React from 'react'
+import useCourses from '../../../hooks/useCourses';
 import CardTable from '../CardTable';
-import { getList } from '../../../../../data/dataServices';
+
 
 function Courses() {
-  const [courses,setCourses] = useState([]);
-
-
-  useEffect(()=>{
-    getList(COURSES_URL).then(setCourses);
-  },[]);
+ const {courses} = useCourses();
 
 
   return (

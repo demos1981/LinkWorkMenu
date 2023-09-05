@@ -1,20 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { MEDIA_URL } from '../../../../../data/dataLink';
-
-
-import {getList} from '../../../../../data/dataServices';
+import React from 'react';
 import CardTable from '../CardTable';
+import useMedia from '../../../hooks/useMedia';
+
 
 function Media() {
-
-   const [media,setMedia] = useState([]);
-
-  useEffect(()=>{
-    getList(MEDIA_URL).then(setMedia);
-  },[]);
+const {media} = useMedia();
+  
   return (
      <CardTable props={media}/>
   )
 }
 
-export default Media
+export default Media;

@@ -1,16 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { MANAGEMENT_URL} from '../../../../../data/dataLink';
-
-
-import {getList} from '../../../../../data/dataServices';
+import React from 'react';
 import CardTable from '../CardTable';
+import useManagement from '../../../hooks/useManagement';
+
 
 function Management() {
-  const [management,setManagement] = useState([]);
-
-  useEffect(()=>{
-    getList( MANAGEMENT_URL).then(setManagement);
-  },[]);
+const {management} = useManagement();
   return (
     <CardTable props={management}/>
   )

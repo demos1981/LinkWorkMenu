@@ -1,15 +1,10 @@
-import React,{useEffect,useState}from 'react';
-import { DEVELOP_URL } from '../../../../../data/dataLink';
-import { getList } from '../../../../../data/dataServices';
+import React from 'react';
 import CardTable from '../CardTable';
+import useDevelop from '../../../hooks/useDevelop';
 
 function Develop() {
-
-    const [develop,setDevelop] = useState([]);
+const {develop} = useDevelop();
   
-    useEffect(()=>{
-      getList(DEVELOP_URL).then(setDevelop);
-    },[]);
   
   return (
     <CardTable props={develop}/>
