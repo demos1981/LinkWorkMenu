@@ -5,6 +5,7 @@ import useSkills from '../../../hooks/useSkills';
 
 function Skills() {
 const {skills} = useSkills(); 
+
   return (
     <CardTable props={skills}/>
   )

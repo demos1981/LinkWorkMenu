@@ -7,12 +7,12 @@ import useBlogs from '../../../hooks/useBlogs';
 
 
 function Blogs() {
- const {blogs} = useBlogs();
+ const {blogs,deleteBlogsItem} = useBlogs();
 
 
   
   return (
-    <CardTable props={blogs}/>
+    <CardTable props={blogs} onDelete = {deleteBlogsItem}/>
   )
 }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import CardTable from '../CardTable';
 import useFramework from '../../../hooks/useFramework';
 

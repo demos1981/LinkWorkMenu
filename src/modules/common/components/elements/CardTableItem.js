@@ -2,7 +2,11 @@ import { Button, CardActions, CardContent, Typography } from '@mui/material'
 import React from 'react'
 
 
-function CardTableItem({props:{logo,urls}}) {
+function CardTableItem({props:{id,logo,urls},onDelete}) {
+  function onDeleteClick(e){
+    e.stopPropagation();
+    onDelete(id);
+  }
   return (
     <>
     <CardContent >
@@ -19,7 +23,7 @@ function CardTableItem({props:{logo,urls}}) {
   <CardActions>
     <Button className="buttonLink" variant="contained" size="small">Link</Button>
     <Button className="buttonEdit" variant="contained" size="small">Edit</Button> 
-    <Button className="buttonDelete" variant="contained" size="small">Delete</Button> 
+    <Button className="buttonDelete" variant="contained" size="small" onClick={onDeleteClick}>Delete</Button> 
   </CardActions>
   </>
   )
