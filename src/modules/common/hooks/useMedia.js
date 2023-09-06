@@ -1,6 +1,6 @@
 import { MEDIA_URL } from "../../../data/dataLink";
 import { useEffect, useState } from 'react';
-import { getList } from "../../../data/dataServices";
+import { getList,deleteItem } from "../../../data/dataServices";
 
 
 export default function useMedia(){
@@ -10,7 +10,15 @@ export default function useMedia(){
       getList(MEDIA_URL).then(setMedia);
     },[]);
 
+    function deleteMediaItem(id){
+      const url = MEDIA_URL;
+      deleteItem(id,url).then(()=>{
+        setMedia(media.filter((item)=>item.id !== id));
+      })
+    }
+
     return {
         media,
+        deleteMediaItem,
     }
 }

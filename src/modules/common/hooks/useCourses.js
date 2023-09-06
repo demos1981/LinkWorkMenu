@@ -1,6 +1,6 @@
 import { COURSES_URL } from '../../../data/dataLink';
 import {useState, useEffect} from 'react';
-import { getList } from '../../../data/dataServices';
+import { getList,deleteItem } from '../../../data/dataServices';
 
 
 export default function useCourses() {
@@ -10,8 +10,17 @@ export default function useCourses() {
     useEffect(()=>{
       getList(COURSES_URL).then(setCourses);
     },[]);
+    
+    function deleteCoursesItem(id){
+      const url = COURSES_URL;
+      deleteItem(id,url).then(()=>{
+        setCourses(courses.filter((item)=>item.id !== id));
+      })
+    }
 
     return{
         courses,
+        deleteCoursesItem
+
     }
 } 

@@ -3,11 +3,11 @@ import CardTable from '../CardTable';
 import useFramework from '../../../hooks/useFramework';
 
 function Framework() {
-const {framework} = useFramework();
+const {framework,deleteFrameworkItem} = useFramework();
  
 
   return (
-    <CardTable props={framework}/>
+    <CardTable props={framework} onDelete={deleteFrameworkItem}/>
   )
 }
 

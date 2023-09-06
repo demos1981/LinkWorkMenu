@@ -3,11 +3,11 @@ import CardTable from '../CardTable';
 import useDevelop from '../../../hooks/useDevelop';
 
 function Develop() {
-const {develop} = useDevelop();
+const {develop,deleteDevelopItem} = useDevelop();
   
   
   return (
-    <CardTable props={develop}/>
+    <CardTable props={develop} onDelete={deleteDevelopItem}/>
   )
 }
 

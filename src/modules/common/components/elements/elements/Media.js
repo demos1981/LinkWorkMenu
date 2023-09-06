@@ -4,10 +4,10 @@ import useMedia from '../../../hooks/useMedia';
 
 
 function Media() {
-const {media} = useMedia();
+const {media,deleteMediaItem} = useMedia();
   
   return (
-     <CardTable props={media}/>
+     <CardTable props={media} onDelete={deleteMediaItem}/>
   )
 }
 

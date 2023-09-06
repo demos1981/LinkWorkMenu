@@ -4,9 +4,9 @@ import useManagement from '../../../hooks/useManagement';
 
 
 function Management() {
-const {management} = useManagement();
+const {management, deleteManagementItem} = useManagement();
   return (
-    <CardTable props={management}/>
+    <CardTable props={management} onDelete={ deleteManagementItem}/>
   )
 }
 

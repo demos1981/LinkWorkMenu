@@ -4,11 +4,11 @@ import CardTable from '../CardTable';
 
 
 function Courses() {
- const {courses} = useCourses();
+ const {courses,deleteCoursesItem} = useCourses();
 
 
   return (
-    <CardTable props={courses}/>
+    <CardTable props={courses} onDelete={deleteCoursesItem}/>
   )
 }
 

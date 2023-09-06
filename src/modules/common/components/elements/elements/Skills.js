@@ -4,10 +4,10 @@ import useSkills from '../../../hooks/useSkills';
 
 
 function Skills() {
-const {skills} = useSkills(); 
+const {skills,deleteSkillsItem} = useSkills(); 
 
   return (
-    <CardTable props={skills}/>
+    <CardTable props={skills} onDelete={deleteSkillsItem}/>
   )
 }
 

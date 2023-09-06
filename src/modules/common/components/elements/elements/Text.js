@@ -5,12 +5,12 @@ import useText from '../../../hooks/useText';
 
 
 function Text() {
-const {text} = useText();
+const {text,deleteTextItem} = useText();
 
 
 
   return (
-    <CardTable props={text}/>
+    <CardTable props={text} onDelete={deleteTextItem}/>
   )
 }
 

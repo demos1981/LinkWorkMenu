@@ -19,8 +19,8 @@
     },
     {
       "id": 4,
-      "logo": "graphiteleader",
-      "urls": "https://graphiteleader.co.jp"
+      "logo": "tict",
+      "urls": "https://tict.co.jp"
     }
   ],
   "develop": [
@@ -30,9 +30,9 @@
       "urls": "https://azura.co.jp"
     },
     {
-      "id": 6,
-      "logo": "rapala",
-      "urls": "https://rapala.co.jp"
+      "id": 5,
+      "logo": "azura",
+      "urls": "https://azura.co.jp"
     }
   ],
   "frameworks": [
@@ -43,8 +43,8 @@
     },
     {
       "id": 8,
-      "logo": "ninja",
-      "urls": "https://ninja.co.jp"
+      "logo": "sony",
+      "urls": "https://sony.co.jp"
     }
   ],
   "management": [
@@ -55,8 +55,8 @@
     },
     {
       "id": 10,
-      "logo": "nike",
-      "urls": "https://nike.co.jp"
+      "logo": "samsung",
+      "urls": "https://samsung.co.jp"
     }
   ],
   "media": [
@@ -67,15 +67,15 @@
     },
     {
       "id": 12,
-      "logo": "born",
-      "urls": "https://born.co.jp"
+      "logo": "stalker",
+      "urls": "https://stalker.co.jp"
     }
   ],
   "skills": [
     {
       "id": 13,
-      "logo": "step",
-      "urls": "https://step.co.ua"
+      "logo": "hillel",
+      "urls": "https://hillel.co.ua"
     },
     {
       "id": 14,
@@ -91,8 +91,8 @@
     },
     {
       "id": 16,
-      "logo": "linux",
-      "urls": "https://linux.co.usa"
+      "logo": "windows",
+      "urls": "https://windows.co.usa"
     }
   ],
   "text": [
@@ -100,11 +100,10 @@
       "id": 17,
       "logo": "warcraft",
       "urls": "https://warcraft.co.usa"
-    },
-    {
+    },  {
       "id": 18,
-      "logo": "startrek",
-      "urls": "https://startrek.co.usa"
+      "logo": "warcraft",
+      "urls": "https://warcraft.co.usa"
     }
   ]
 }
