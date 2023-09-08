@@ -1,6 +1,5 @@
 
 import './App.css';
-import CreateButton from '../src/modules/common/components/elements/CreateButton';
 import Header from '../src/modules/common/components/elements/topMenu/Header';
 
 import { useState } from 'react';
@@ -27,7 +26,7 @@ const [currentPath, setCurrentPath]=useState('blogs');
 <>
 <Header currentPath = {currentPath} navigate = {setCurrentPath}/>
 
-<CreateButton/>
+
 {currentPath === "blogs" ? <Blogs/> :null}
 {currentPath === "courses" ? <Courses/> :null}
 {currentPath === "develop" ? <Develop/> :null}

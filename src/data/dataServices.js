@@ -11,10 +11,10 @@
         
     }
     
-    export async function createItem(item){
-        const res = await fetch(item, {
+    export async function createItem(obj,url){
+        const res = await fetch(url, {
             method: 'POST',
-            body: JSON.stringify(item),
+            body: JSON.stringify(obj),
             headers: {
                 'Content-type': 'application/json',
             }

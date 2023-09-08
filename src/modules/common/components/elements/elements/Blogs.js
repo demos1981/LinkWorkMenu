@@ -1,18 +1,22 @@
 import React from 'react';
 import CardTable from '../CardTable';
 import useBlogs from '../../../hooks/useBlogs';
+import CreateButton from '../CreateButton';
 
 
 
 
 
 function Blogs() {
- const {blogs,deleteBlogsItem} = useBlogs();
+ const {blogs,deleteBlogsItem,createBlogsItem} = useBlogs();
 
 
   
   return (
-    <CardTable props={blogs} onDelete = {deleteBlogsItem}/>
+    <>
+    <CreateButton onCreate={createBlogsItem}/>
+    <CardTable props={blogs} onDelete = {deleteBlogsItem} />
+    </>
   )
 }
 

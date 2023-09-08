@@ -1,6 +1,8 @@
 import React from 'react'
 import useCourses from '../../../hooks/useCourses';
 import CardTable from '../CardTable';
+import CreateButton from '../CreateButton';
+
 
 
 function Courses() {
@@ -8,7 +10,10 @@ function Courses() {
 
 
   return (
+    <>
+     <CreateButton/>
     <CardTable props={courses} onDelete={deleteCoursesItem}/>
+    </>
   )
 }
 
