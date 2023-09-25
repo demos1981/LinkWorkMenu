@@ -1,0 +1,17 @@
+.formCard {
+    
+    position:relative;
+    top:10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+    height: 200px;
+    width: 600px;
+
+}
+.textField{
+    height:50px;
+    width:250px;
+    margin-left:5px;
+}

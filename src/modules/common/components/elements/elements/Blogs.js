@@ -7,6 +7,11 @@ import CreateButton from '../CreateButton';
 
 
 
+
+
+
+
+
 function Blogs() {
  const {blogs,deleteBlogsItem,createBlogsItem} = useBlogs();
 
@@ -15,7 +20,9 @@ function Blogs() {
   return (
     <>
     <CreateButton onCreate={createBlogsItem}/>
-    <CardTable props={blogs} onDelete = {deleteBlogsItem} />
+    <CardTable props={blogs} onDelete={deleteBlogsItem} />
+
+  
     </>
   )
 }

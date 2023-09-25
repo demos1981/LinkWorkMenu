@@ -13,7 +13,7 @@ function CardTable({props,onDelete}) {
 
   return (
    
-    <Card variant="outlined" sx={{ maxWidth: 230,marginTop:10,marginRight:5}}>
+    <Card variant="outlined" >
 
  {props.map((item)=>(
   <CardTableItem key={item.id} props={item} onDelete={onDelete}/>

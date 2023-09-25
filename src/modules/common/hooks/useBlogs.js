@@ -16,8 +16,9 @@ function deleteBlogsItem(id){
   })
 }
 function createBlogsItem (newItem){
-    createItem({...newItem}).then((data)=>{
-      setBlogs([...blogs,data]);
+  const url = BLOGS_URL;
+    createItem({...newItem,url}).then((data)=>{
+      setBlogs([...blogs, data]);
     });
   }
 

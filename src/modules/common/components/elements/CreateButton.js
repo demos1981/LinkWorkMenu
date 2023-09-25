@@ -1,21 +1,37 @@
-import { Button } from "@mui/material";
+// import { Button } from "@mui/material";
 import React from "react";
 
+// import Popup from 'reactjs-popup';
+import FormsInput from "./FormsInput";
+
+
+
+
+
 function CreateButton({onCreate}){
-function onCreateClick(e){
-e.preventDefault();
+//  function onCreateClick(e){
+// e.preventDefault();
+// <PopUps/>
 
+// // onCreate({
+// //     logo:e.target.elements.logo.value,
+// //     url:e.target.elements.url.value,
+  
+// // })
 
-onCreate({
-    logo:e.target.elements.logo.value,
-    url:e.target.elements.url.value,
-})
-
-}
+//  }
 
     return(
-        <Button variant="contained" sx={{marginTop:10}} onClick={onCreateClick}>Create Cards</Button>
-    )
+        <>
+        
+                
+            <div>
+                {<FormsInput />}
+            </div>
+              
+    
+        </>
+    );
 }
 
 export default CreateButton;
