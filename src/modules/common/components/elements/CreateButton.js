@@ -8,7 +8,8 @@ import FormsInput from "./FormsInput";
 
 
 
-function CreateButton({onCreate}){
+function CreateButton(url){
+    console.log(url);
 //  function onCreateClick(e){
 // e.preventDefault();
 // <PopUps/>
@@ -26,7 +27,7 @@ function CreateButton({onCreate}){
         
                 
             <div>
-                {<FormsInput />}
+                {<FormsInput urls={url}/>}
             </div>
               
     

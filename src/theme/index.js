@@ -7,5 +7,6 @@ export default createTheme({
           main: '#6797A1',
           dark:'#0B8389',
         },
+       
     },
 });

@@ -3,9 +3,11 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import { createItem } from '../../../../data/dataServices';
+
 import Popup from 'reactjs-popup';
 import "./formStyles.css";
+import { createItem } from '../../../../data/dataServices';
+// import { BLOGS_URL } from '../../../../data/dataLink';
 
 
 
@@ -13,6 +15,7 @@ import "./formStyles.css";
 const validationSchema = yup.object({
   logo: yup
     .string('Enter your logo name'),
+   
   
   url: yup
     .string('Enter your url')
@@ -21,17 +24,24 @@ const validationSchema = yup.object({
 });
 
 
- function FormsInput(urls) {
+ function FormsInput({urls:{urls}}) {
+
+  const url=urls;
+  console.log(url);
+
   const formik = useFormik({
     initialValues: {
       logo: 'logo',
-      url: 'url',
+      urls: 'urls',
+      id:Date.now(),
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-      createItem(values,urls);
+      createItem(values,url);
+      
     },
+
+
     
 });
 
@@ -53,17 +63,17 @@ return (
       />
       <TextField className="textField"
      
-        id="url"
-        name="url"
-        label="Url"
-        type="url"
-        value={formik.values.url}
+        id="urls"
+        name="urls"
+        label="Urls"
+        type="urls"
+        value={formik.values.urls}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        error={formik.touched.url && Boolean(formik.errors.url)}
-        helperText={formik.touched.url && formik.errors.url}
+        error={formik.touched.urls && Boolean(formik.errors.urls)}
+        helperText={formik.touched.urls && formik.errors.urls}
       />
-      <Button color="primary" variant="contained"  type="submit" sx={{height:50,width:200,marginLeft:2}}>
+      <Button color="primary" variant="contained"  type="submit" sx={{height:50,width:200,marginLeft:2}}  >
         Submit
       </Button>
         

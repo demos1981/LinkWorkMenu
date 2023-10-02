@@ -6,9 +6,24 @@
       "urls": "https://shimano.co.jp"
     },
     {
-      "id": 2,
-      "logo": "shimano",
-      "urls": "https://shimano.co.jp"
+      "logo": " MUI Core",
+      "urls": "https://mui.com/material-ui/react-link/",
+      "id": 1695675802827
+    },
+    {
+      "logo": "logo",
+      "urls": "https://mui.com/material-ui/react-link/",
+      "id": 1695836510755
+    },
+    {
+      "logo": "logo",
+      "urls": "http//:fack.com",
+      "id": 1696274206921
+    },
+    {
+      "logo": "fuck",
+      "urls": "http//:fack.com",
+      "id": 1696274362482
     }
   ],
   "courses": [
@@ -21,18 +36,18 @@
       "id": 4,
       "logo": "tict",
       "urls": "https://tict.co.jp"
+    },
+    {
+      "logo": "jfvfngnfjvh",
+      "urls": "http//:fack.com",
+      "id": 1696275552711
     }
   ],
   "develop": [
     {
-      "id": 5,
-      "logo": "azura",
-      "urls": "https://azura.co.jp"
-    },
-    {
-      "id": 5,
-      "logo": "azura",
-      "urls": "https://azura.co.jp"
+      "logo": "myBestLink",
+      "urls": "http//:fack.com",
+      "id": 1696276626871
     }
   ],
   "frameworks": [
@@ -61,14 +76,14 @@
   ],
   "media": [
     {
-      "id": 11,
+      "id": 12,
       "logo": "stalker",
       "urls": "https://stalker.co.jp"
     },
     {
-      "id": 12,
-      "logo": "stalker",
-      "urls": "https://stalker.co.jp"
+      "logo": "newLink",
+      "urls": "https://mui.com/material-ui/react-link/",
+      "id": 1696276813130
     }
   ],
   "skills": [
@@ -100,7 +115,8 @@
       "id": 17,
       "logo": "warcraft",
       "urls": "https://warcraft.co.usa"
-    },  {
+    },
+    {
       "id": 18,
       "logo": "warcraft",
       "urls": "https://warcraft.co.usa"

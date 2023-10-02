@@ -19,9 +19,12 @@
                 'Content-type': 'application/json',
             }
         });
+     
         return await res.json();
-    
     }
+
+
+
     export async function updateItem(item){
         const res = await fetch(item + item.id, {
             method: 'PUT',
