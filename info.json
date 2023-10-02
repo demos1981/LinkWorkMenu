@@ -14,16 +14,6 @@
       "logo": "logo",
       "urls": "https://mui.com/material-ui/react-link/",
       "id": 1695836510755
-    },
-    {
-      "logo": "logo",
-      "urls": "http//:fack.com",
-      "id": 1696274206921
-    },
-    {
-      "logo": "fuck",
-      "urls": "http//:fack.com",
-      "id": 1696274362482
     }
   ],
   "courses": [
@@ -41,6 +31,11 @@
       "logo": "jfvfngnfjvh",
       "urls": "http//:fack.com",
       "id": 1696275552711
+    },
+    {
+      "logo": "logo",
+      "urls": "http//:fack.com",
+      "id": 1696277623213
     }
   ],
   "develop": [
@@ -48,6 +43,11 @@
       "logo": "myBestLink",
       "urls": "http//:fack.com",
       "id": 1696276626871
+    },
+    {
+      "logo": "logo",
+      "urls": "http//:fack.com",
+      "id": 1696278016600
     }
   ],
   "frameworks": [
