@@ -2,6 +2,9 @@ import { deleteItem, getList,} from '../../../data/dataServices';
 import { BLOGS_URL } from '../../../data/dataLink';
 import { useEffect, useState } from 'react';
 
+
+
+
 export default function useBlogs(){
     const [blogs,setBlogs] = useState([]);
 
@@ -21,10 +24,12 @@ function deleteBlogsItem(id){
 
 
 
-// function createBlogsItem (newItem){
+// function createBlogsItem(newBlogs){
+ 
 //   const url = BLOGS_URL;
-//     createItem({...newItem,url}).then((data)=>{
+//     createItem({...newBlogs,url}).then((data)=>{
 //       setBlogs([...blogs, data]);
+//       console.log(setBlogs);
 //     });
 //   }
 

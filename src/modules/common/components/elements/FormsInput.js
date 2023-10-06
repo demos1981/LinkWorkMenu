@@ -24,10 +24,10 @@ const validationSchema = yup.object({
 });
 
 
- function FormsInput({urls:{urls}}) {
+ function FormsInput(urls) {
 
-  const url=urls;
-  console.log(url);
+  
+  console.log(urls);
 
   const formik = useFormik({
     initialValues: {
@@ -37,7 +37,7 @@ const validationSchema = yup.object({
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      createItem(values,url);
+      createItem(values,urls);
       
     },
 

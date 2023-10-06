@@ -14,7 +14,7 @@ function Blogs() {
   
   return (
     <>
-    <CreateButton props={url}/>
+    <CreateButton url={url}/>
     <CardTable props={blogs} onDelete={deleteBlogsItem} />
 
   
