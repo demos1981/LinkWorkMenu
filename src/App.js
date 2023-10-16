@@ -45,16 +45,6 @@ const [currentPath, setCurrentPath]=useState('blogs');
 
 </Routes>
 
-{/* {currentPath === "blogs" ? <Blogs/> :null}
-{currentPath === "courses" ? <Courses/> :null}
-{currentPath === "develop" ? <Develop/> :null}
-{currentPath === "framework" ? <Framework/> :null}
-{currentPath === "management" ? <Management/> :null}
-{currentPath === "media" ? <Media/> :null}
-{currentPath === "skills" ? <Skills/> :null}
-{currentPath === "soft" ? <Soft/> :null}
-{currentPath === "text" ? <Text/> :null} */}
-
 </>
   );
 
