@@ -14,6 +14,7 @@ function Header({currentPath,navigate}) {
        <Toolbar>
        <LeftMenu/>
         <Button to="/" variant="text" component={NavLink} color="inherit" sx={{flexGrow:1, fontSize:25, width:200}}>
+    
 
             Work Menu
          

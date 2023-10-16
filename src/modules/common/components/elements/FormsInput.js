@@ -1,77 +1,76 @@
 import React from 'react';
-import { useFormik } from 'formik';
+
 import * as yup from 'yup';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 
 import Popup from 'reactjs-popup';
 import "./formStyles.css";
-import { createItem } from '../../../../data/dataServices';
-// import { BLOGS_URL } from '../../../../data/dataLink';
 
 
 
 
-const validationSchema = yup.object({
-  logo: yup
-    .string('Enter your logo name'),
+
+
+// const validationSchema = yup.object({
+//   logo: yup
+//     .string('Enter your logo name'),
    
   
-  url: yup
-    .string('Enter your url')
-    .url()
-    .nullable(),
-});
+//   url: yup
+//     .string('Enter your url')
+//     .url()
+//     .nullable(),
+// });
 
 
- function FormsInput(urls) {
+ function FormsInput({onCreate}) {
+  function onFormSubmit(e){
+     e.preventDefault();
+     onCreate({
+      logo:e.target.elements.logo.value,
+      urls:e.target.elements.urls.value,
+     });
+     e.target.reset();
 
-  
-  console.log(urls);
-
-  const formik = useFormik({
-    initialValues: {
-      logo: 'logo',
-      urls: 'urls',
-      id:Date.now(),
-    },
-    validationSchema: validationSchema,
-    onSubmit: (values) => {
-      createItem(values,urls);
-      
-    },
+  }
 
 
+//   const formik = useFormik({
+//     initialValues: {
+//       logo: 'logo',
+//       urls: 'urls',
+//       id:Date.now(),
+//     },
+
+//     validationSchema: validationSchema,
+//     onSubmit: (values) => {
     
-});
+//       onCreate(values,urls);
+//       }
+      
+// });
 
 return (
   <div className="formCard">
    <Popup  trigger={ <Button variant="contained" sx={{marginTop:10}}>Create Cards</Button>} position="right center">
           {close => (    
-    <form onSubmit={formik.handleSubmit}>
-      <TextField className="textField" 
+    <form onSubmit={onFormSubmit}>
+      <input className="textField" 
        
-        id="logo"
+        // id="logo"
         name="logo"
-        label="Logo"
-        value={formik.values.logo}
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        error={formik.touched.logo && Boolean(formik.errors.logo)}
-        helperText={formik.touched.logo && formik.errors.logo}
+        // label="Logo"
+        type="text"
+    
       />
-      <TextField className="textField"
+      <input className="textField"
      
-        id="urls"
+        // id="urls"
         name="urls"
-        label="Urls"
-        type="urls"
-        value={formik.values.urls}
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        error={formik.touched.urls && Boolean(formik.errors.urls)}
-        helperText={formik.touched.urls && formik.errors.urls}
+        // label="Urls"
+        type="text"
+    
       />
       <Button color="primary" variant="contained"  type="submit" sx={{height:50,width:200,marginLeft:2}}  >
         Submit

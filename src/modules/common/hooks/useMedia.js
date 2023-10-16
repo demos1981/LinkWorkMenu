@@ -1,6 +1,6 @@
 import { MEDIA_URL } from "../../../data/dataLink";
 import { useEffect, useState } from 'react';
-import { getList,deleteItem } from "../../../data/dataServices";
+import { getList,deleteItem,createItem } from "../../../data/dataServices";
 
 
 export default function useMedia(){
@@ -17,8 +17,19 @@ export default function useMedia(){
       })
     }
 
+    function createMediaItem(newMedia){
+      const urlProps = MEDIA_URL;
+       
+          createItem({...newMedia,urlProps}).then((data)=>{
+            setMedia([...media, data]);
+          
+          });
+        }
+
+
     return {
         media,
         deleteMediaItem,
+        createMediaItem,
     }
 }

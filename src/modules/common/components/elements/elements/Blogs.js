@@ -1,20 +1,21 @@
 import React from 'react';
 import CardTable from '../CardTable';
 import useBlogs from '../../../hooks/useBlogs';
-import CreateButton from '../CreateButton';
-import { BLOGS_URL } from '../../../../../data/dataLink';
+
+import FormsInput from '../FormsInput';
+
 
 
 
 function Blogs() {
- const {blogs,deleteBlogsItem,} = useBlogs();
- const url = BLOGS_URL
+ const {blogs,deleteBlogsItem,createBlogsItem} = useBlogs();
+
 
 
   
   return (
     <>
-    <CreateButton url={url}/>
+    <FormsInput  onCreate={createBlogsItem}/>
     <CardTable props={blogs} onDelete={deleteBlogsItem} />
 
   

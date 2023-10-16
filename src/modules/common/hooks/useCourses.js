@@ -1,6 +1,6 @@
 import { COURSES_URL } from '../../../data/dataLink';
 import {useState, useEffect} from 'react';
-import { getList,deleteItem } from '../../../data/dataServices';
+import { getList,deleteItem,createItem } from '../../../data/dataServices';
 
 
 export default function useCourses() {
@@ -18,9 +18,20 @@ export default function useCourses() {
       })
     }
 
+    function createCoursesItem(newCourses){
+      const urlProps = COURSES_URL;
+       
+          createItem({...newCourses,urlProps}).then((data)=>{
+            setCourses([...courses, data]);
+          
+          });
+        }
+
+        
     return{
         courses,
-        deleteCoursesItem
+        deleteCoursesItem,
+        createCoursesItem
 
     }
 } 

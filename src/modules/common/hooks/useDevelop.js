@@ -1,5 +1,5 @@
 import { DEVELOP_URL } from "../../../data/dataLink";
-import { getList,deleteItem } from "../../../data/dataServices";
+import { getList,deleteItem,createItem } from "../../../data/dataServices";
 import {useEffect,useState} from 'react';
 
 
@@ -16,9 +16,22 @@ export default function useDevelop(){
         setDevelop(develop.filter((item)=>item.id !== id));
       })
     }
+
+
+    function createDevelopItem(newDevelop){
+      const urlProps = DEVELOP_URL;
+       
+          createItem({...newDevelop,urlProps}).then((data)=>{
+            setDevelop([...develop, data]);
+          
+          });
+        }
+
+        
     return {
         develop,
         deleteDevelopItem,
+        createDevelopItem,
 
     }
 }

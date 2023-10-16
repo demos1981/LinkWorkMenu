@@ -1,6 +1,6 @@
 import { TEXT_URL } from "../../../data/dataLink";
 import {useState, useEffect} from 'react';
-import { getList,deleteItem } from "../../../data/dataServices";
+import { getList,deleteItem,createItem } from "../../../data/dataServices";
 
 export default function useText(){
     const [text,setText] = useState([]);
@@ -17,8 +17,18 @@ export default function useText(){
       })
     }
 
+    function createTextItem(newText){
+      const urlProps = TEXT_URL;
+       
+          createItem({...newText,urlProps}).then((data)=>{
+            setText([...text, data]);
+          
+          });
+        }
+
     return{
         text,
         deleteTextItem,
+        createTextItem,
     }
 }

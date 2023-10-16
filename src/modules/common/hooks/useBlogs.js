@@ -1,4 +1,4 @@
-import { deleteItem, getList,} from '../../../data/dataServices';
+import { deleteItem, getList,createItem} from '../../../data/dataServices';
 import { BLOGS_URL } from '../../../data/dataLink';
 import { useEffect, useState } from 'react';
 
@@ -24,19 +24,19 @@ function deleteBlogsItem(id){
 
 
 
-// function createBlogsItem(newBlogs){
+function createBlogsItem(newBlogs){
+const urlProps = BLOGS_URL;
  
-//   const url = BLOGS_URL;
-//     createItem({...newBlogs,url}).then((data)=>{
-//       setBlogs([...blogs, data]);
-//       console.log(setBlogs);
-//     });
-//   }
+    createItem({...newBlogs,urlProps}).then((data)=>{
+      setBlogs([...blogs, data]);
+    
+    });
+  }
 
 
     return{
         blogs,
         deleteBlogsItem,
-        // createBlogsItem,
+        createBlogsItem,
     };
 }

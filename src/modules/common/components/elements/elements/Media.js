@@ -1,19 +1,20 @@
 import React from 'react';
 import CardTable from '../CardTable';
 import useMedia from '../../../hooks/useMedia';
-import CreateButton from '../CreateButton';
-import { MEDIA_URL } from '../../../../../data/dataLink';
+
+
+import FormsInput from '../FormsInput';
 
 
 
 
 function Media() {
-const {media,deleteMediaItem} = useMedia();
-const url = MEDIA_URL;
+const {media,deleteMediaItem,createMediaItem} = useMedia();
+
   
   return (
     <>
-     <CreateButton urls={url}/>
+     <FormsInput onCreate={createMediaItem}/>
      <CardTable props={media} onDelete={deleteMediaItem}/>
      </>
   )

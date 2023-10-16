@@ -1,20 +1,18 @@
 import React from 'react'
 import CardTable from '../CardTable';
 import useText from '../../../hooks/useText';
-import CreateButton from '../CreateButton';
-import { TEXT_URL } from '../../../../../data/dataLink';
+import FormsInput from '../FormsInput';
 
 
 
 function Text() {
-const {text,deleteTextItem} = useText();
-const url= TEXT_URL;
+const {text,deleteTextItem,createTextItem} = useText();
 
 
 
   return (
     <>
-    <CreateButton urls={url}/>
+    <FormsInput onCreate={createTextItem}/>
     <CardTable props={text} onDelete={deleteTextItem}/>
     </>
   )

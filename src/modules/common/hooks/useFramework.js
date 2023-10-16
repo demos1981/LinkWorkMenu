@@ -1,6 +1,6 @@
 import { FRAMEWORK_URL } from "../../../data/dataLink";
 import { useEffect, useState } from 'react';
-import { getList,deleteItem } from "../../../data/dataServices";
+import { getList,deleteItem,createItem } from "../../../data/dataServices";
 
 
 export default function useFramework(){
@@ -16,8 +16,20 @@ export default function useFramework(){
          setFrameworks(framework.filter((item)=>item.id !== id));
       })
     }
+
+    function createFrameworkItem(newFramework){
+      const urlProps = FRAMEWORK_URL;
+       
+          createItem({...newFramework,urlProps}).then((data)=>{
+            setFrameworks([...framework, data]);
+          
+          });
+        }
+
  return {
     framework,
     deleteFrameworkItem,
+    createFrameworkItem,
+   
  }
 }

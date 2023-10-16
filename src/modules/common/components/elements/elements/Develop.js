@@ -1,18 +1,17 @@
 import React from 'react';
 import CardTable from '../CardTable';
 import useDevelop from '../../../hooks/useDevelop';
-import CreateButton from '../CreateButton';
-import { DEVELOP_URL } from '../../../../../data/dataLink';
+import FormsInput from '../FormsInput';
 
 
 function Develop() {
-const {develop,deleteDevelopItem} = useDevelop();
-const url = DEVELOP_URL;
+const {develop,deleteDevelopItem,createDevelopItem} = useDevelop();
+
   
   
   return (
     <>
-    <CreateButton urls={url}/>
+    <FormsInput onCreate={createDevelopItem}/>
     <CardTable props={develop} onDelete={deleteDevelopItem}/>
     </>
   )

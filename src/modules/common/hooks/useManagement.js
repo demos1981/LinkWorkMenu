@@ -1,5 +1,5 @@
 import { MANAGEMENT_URL } from "../../../data/dataLink";
-import { getList,deleteItem } from "../../../data/dataServices";
+import { getList,deleteItem,createItem } from "../../../data/dataServices";
 import { useEffect, useState } from 'react';
 
 export default function useManagement(){
@@ -16,9 +16,19 @@ export default function useManagement(){
       })
     }
 
+    function createManagementItem(newManagement){
+      const urlProps = MANAGEMENT_URL;
+       
+          createItem({...newManagement,urlProps}).then((data)=>{
+            setManagement([...management, data]);
+          
+          });
+        }
+
     return{
         management,
         deleteManagementItem,
+        createManagementItem,
     }
 
 }

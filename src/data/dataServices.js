@@ -1,3 +1,4 @@
+import { BLOGS_URL } from "./dataLink";
 
 
 
@@ -11,10 +12,11 @@
         
     }
     
-    export async function createItem(obj,url){
+    export async function createItem(newItems){
+      const url = newItems.urlProps
         const res = await fetch(url, {
             method: 'POST',
-            body: JSON.stringify(obj),
+            body: JSON.stringify(newItems),
             headers: {
                 'Content-type': 'application/json',
             }

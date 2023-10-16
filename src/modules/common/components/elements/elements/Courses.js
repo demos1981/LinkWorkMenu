@@ -1,19 +1,20 @@
 import React from 'react'
 import useCourses from '../../../hooks/useCourses';
 import CardTable from '../CardTable';
-import CreateButton from '../CreateButton';
-import { COURSES_URL } from '../../../../../data/dataLink';
+
+
+import FormsInput from '../FormsInput';
 
 
 
 function Courses() {
- const {courses,deleteCoursesItem} = useCourses();
- const url = COURSES_URL;
+ const {courses,deleteCoursesItem,createCoursesItem }= useCourses();
+ 
 
 
   return (
     <>
-     <CreateButton urls={url}/>
+     <FormsInput onCreate={createCoursesItem}/>
     <CardTable props={courses} onDelete={deleteCoursesItem}/>
     </>
   )

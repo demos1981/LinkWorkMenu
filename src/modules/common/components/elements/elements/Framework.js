@@ -1,19 +1,18 @@
 import React from 'react';
 import CardTable from '../CardTable';
 import useFramework from '../../../hooks/useFramework';
-import CreateButton from '../CreateButton';
-import { FRAMEWORK_URL } from '../../../../../data/dataLink';
+import FormsInput from '../FormsInput';
 
 
 
 function Framework() {
-const {framework,deleteFrameworkItem} = useFramework();
-const url = FRAMEWORK_URL;
+const {framework,deleteFrameworkItem,createFrameworkItem} = useFramework();
+
  
 
   return (
     <>
-    <CreateButton urls={url}/>
+    <FormsInput onCreate={createFrameworkItem}/>
     <CardTable props={framework} onDelete={deleteFrameworkItem}/>
     </>
   )

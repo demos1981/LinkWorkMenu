@@ -1,18 +1,19 @@
 import React from 'react'
 import CardTable from '../CardTable';
 import useSkills from '../../../hooks/useSkills';
-import CreateButton from '../CreateButton';
-import { SKILLS_URL } from '../../../../../data/dataLink';
+
+
+import FormsInput from '../FormsInput';
 
 
 
 function Skills() {
-const {skills,deleteSkillsItem} = useSkills(); 
-const url = SKILLS_URL
+const {skills,deleteSkillsItem,createSkillsItem} = useSkills(); 
+
 
   return (
     <>
-     <CreateButton urls={url}/>
+     <FormsInput onCreate={createSkillsItem}/>
     <CardTable props={skills} onDelete={deleteSkillsItem}/>
     </>
   )

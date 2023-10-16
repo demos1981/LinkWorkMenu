@@ -1,19 +1,18 @@
 import React from 'react';
 import CardTable from '../CardTable';
 import useManagement from '../../../hooks/useManagement';
-import CreateButton from '../CreateButton';
-import { MANAGEMENT_URL } from '../../../../../data/dataLink';
+import FormsInput from '../FormsInput';
 
 
 
 function Management() {
-const {management, deleteManagementItem} = useManagement();
-const url = MANAGEMENT_URL;
+const {management, deleteManagementItem,createManagementItem} = useManagement();
+
 
 
   return (
     <>
-         <CreateButton urls={url}/>
+         <FormsInput onCreate={createManagementItem}/>
          <CardTable props={management} onDelete={ deleteManagementItem}/>
     </>
    

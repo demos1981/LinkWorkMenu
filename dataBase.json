@@ -9,6 +9,12 @@
       "logo": "logo",
       "urls": "https://mui.com/material-ui/react-link/",
       "id": 1695836510755
+    },
+    {
+      "logo": "blogging",
+      "urls": "http//:fack.com",
+      "urlProps": "http://localhost:3000/blogs/",
+      "id": 1695836510756
     }
   ],
   "courses": [
@@ -23,14 +29,10 @@
       "urls": "https://tict.co.jp"
     },
     {
-      "logo": "jfvfngnfjvh",
+      "logo": "coursing",
       "urls": "http//:fack.com",
-      "id": 1696275552711
-    },
-    {
-      "logo": "logo",
-      "urls": "http//:fack.com",
-      "id": 1696277623213
+      "urlProps": "http://localhost:3000/courses/",
+      "id": 5
     }
   ],
   "develop": [
@@ -43,6 +45,18 @@
       "logo": "logo",
       "urls": "http//:fack.com",
       "id": 1696278016600
+    },
+    {
+      "logo": "logotype",
+      "urls": "http//:fack.com",
+      "urlProps": "http://localhost:3000/develop/",
+      "id": 1696278016601
+    },
+    {
+      "logo": "develop",
+      "urls": "http//:fack.com",
+      "urlProps": "http://localhost:3000/develop/",
+      "id": 1696278016602
     }
   ],
   "frameworks": [
@@ -55,6 +69,12 @@
       "id": 8,
       "logo": "sony",
       "urls": "https://sony.co.jp"
+    },
+    {
+      "logo": "framework",
+      "urls": "http//:fack.com",
+      "urlProps": "http://localhost:3000/frameworks/",
+      "id": 9
     }
   ],
   "management": [
@@ -67,6 +87,12 @@
       "id": 10,
       "logo": "samsung",
       "urls": "https://samsung.co.jp"
+    },
+    {
+      "logo": "management",
+      "urls": "http//:fack.com",
+      "urlProps": "http://localhost:3000/management/",
+      "id": 11
     }
   ],
   "media": [
@@ -79,6 +105,12 @@
       "logo": "newLink",
       "urls": "https://mui.com/material-ui/react-link/",
       "id": 1696276813130
+    },
+    {
+      "logo": "media",
+      "urls": "http//:fack.com",
+      "urlProps": "http://localhost:3000/media/",
+      "id": 1696276813132
     }
   ],
   "skills": [
@@ -91,6 +123,12 @@
       "id": 14,
       "logo": "hillel",
       "urls": "https://hillel.co.ua"
+    },
+    {
+      "logo": "skills",
+      "urls": "http//:fack.com",
+      "urlProps": "http://localhost:3000/skills/",
+      "id": 15
     }
   ],
   "soft": [
@@ -103,6 +141,12 @@
       "id": 16,
       "logo": "windows",
       "urls": "https://windows.co.usa"
+    },
+    {
+      "logo": "soft",
+      "urls": "http//:fack.com",
+      "urlProps": "http://localhost:3000/soft/",
+      "id": 17
     }
   ],
   "text": [
@@ -115,6 +159,12 @@
       "id": 18,
       "logo": "warcraft",
       "urls": "https://warcraft.co.usa"
+    },
+    {
+      "logo": "text",
+      "urls": "http//:fack.com",
+      "urlProps": "http://localhost:3000/text/",
+      "id": 19
     }
   ]
 }

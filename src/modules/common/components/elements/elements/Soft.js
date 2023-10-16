@@ -1,17 +1,16 @@
 import React from 'react';
 import CardTable from '../CardTable';
 import useSoft from '../../../hooks/useSoft';
-import CreateButton from '../CreateButton';
-import { SOFT_URL } from '../../../../../data/dataLink';
+import FormsInput from '../FormsInput';
 
 
 function Soft() {
-const {soft,deleteSoftItem} = useSoft();
-const url = SOFT_URL;
+const {soft,deleteSoftItem,createSoftItem} = useSoft();
+
 
   return (
     <>
-      <CreateButton urls={url}/>
+    <FormsInput onCreate={createSoftItem}/>
     <CardTable props={soft} onDelete={deleteSoftItem}/>
     </>
   )
