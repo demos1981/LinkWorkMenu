@@ -6,7 +6,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import App from './App';
-import { ThemeProvider } from '@mui/material';
+import { Container, ThemeProvider } from "@mui/material";
 import theme from './theme';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -18,15 +18,13 @@ import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- 
-  <BrowserRouter>
-    <ThemeProvider theme={theme}>
- 
-       <App />
-   
-    </ThemeProvider>
-  </BrowserRouter>
-  
+  <Container maxWidth="lg">
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </BrowserRouter>
+  </Container>
 );
 
 

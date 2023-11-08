@@ -15,6 +15,12 @@
       "urls": "http//:fack.com",
       "urlProps": "http://localhost:3000/blogs/",
       "id": 1695836510756
+    },
+    {
+      "logo": "My rest file",
+      "urls": "http//:fack.com",
+      "urlProps": "http://localhost:3000/blogs/",
+      "id": 1695836510757
     }
   ],
   "courses": [
@@ -165,6 +171,24 @@
       "urls": "http//:fack.com",
       "urlProps": "http://localhost:3000/text/",
       "id": 19
+    },
+    {
+      "logo": "sony",
+      "urls": "https://sony.com.ua",
+      "urlProps": "http://localhost:3000/text/",
+      "id": 20
+    },
+    {
+      "logo": "Name Site",
+      "urls": "Url address",
+      "urlProps": "http://localhost:3000/text/",
+      "id": 21
+    },
+    {
+      "logo": "Name Site",
+      "urls": "Url address",
+      "urlProps": "http://localhost:3000/text/",
+      "id": 22
     }
   ]
 }

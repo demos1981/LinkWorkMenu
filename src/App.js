@@ -12,7 +12,7 @@ import Media from './modules/common/components/elements/elements/Media';
 import Skills from './modules/common/components/elements/elements/Skills';
 import Soft from './modules/common/components/elements/elements/Soft';
 import Text from './modules/common/components/elements/elements/Text';
-import { Routes,Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, Outlet } from "react-router-dom";
 
 
 
@@ -26,26 +26,23 @@ const [currentPath, setCurrentPath]=useState('blogs');
 
 
   return (
-   
-<>
-<Header currentPath = {currentPath} navigate = {setCurrentPath}/>
-<Routes>
- 
-  <Route path="blogs"element={<Blogs/>}/>
-  <Route path="courses"element={<Courses/>}/>
-  <Route path="develop"element={<Develop/>}/>
-  <Route path="framework"element={<Framework/>}/>
-  <Route path="management"element={<Management/>}/>
-  <Route path="media"element={<Media/>}/>
-  <Route path="skills"element={<Skills/>}/>
-  <Route path="soft"element={<Soft/>}/>
-  <Route path="text"element={<Text/>}/>
-   
-  <Route path="/" element={<Navigate to="blogs"/>}/>
+    <>
+      <Header currentPath={currentPath} navigate={setCurrentPath} />
+      <Routes>
+        <Route path="blogs" element={<Blogs />} />
+        <Route path="courses" element={<Courses />} />
+        <Route path="develop" element={<Develop />} />
+        <Route path="framework" element={<Framework />} />
+        <Route path="management" element={<Management />} />
+        <Route path="media" element={<Media />} />
+        <Route path="skills" element={<Skills />} />
+        <Route path="soft" element={<Soft />} />
+        <Route path="text" element={<Text />} />
 
-</Routes>
-
-</>
+        <Route path="/" element={<Navigate to="blogs" />} />
+      </Routes>
+    
+    </>
   );
 
 }

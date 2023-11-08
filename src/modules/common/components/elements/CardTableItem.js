@@ -10,26 +10,42 @@ function CardTableItem({props:{id,logo,urls},onDelete}) {
   }
   return (
     <>
-    <CardContent >
+      <div className='linkCard'>
+        <CardContent>
+          <Typography gutterBottom variant="h5" color="primary" component="div">
+            {logo}
+          </Typography>
+          <Typography variant="body3" color="primary">
+            {urls}
+          </Typography>
+        </CardContent>
 
-    <Typography gutterBottom variant="h5" color="primary" component="div">{logo}
-  
-    </Typography>
-    <Typography variant="body3" color="primary">{urls}
-   
-    </Typography>
-  
-  </CardContent>
-  
-  <CardActions>
-    <Button className="buttonLink" color='secondary' size="small" variant="contained"><Link   href={urls} target="_blank" rel='noopener'>Link</Link></Button>
-    <Button className="buttonEdit" variant="contained" size="small">Edit</Button> 
-    <Button className="buttonDelete" variant="contained" size="small" onClick={onDeleteClick}>Delete</Button> 
-  
-  </CardActions>
-
-  </>
-  )
+        <CardActions>
+          <Button
+            className="buttonLink"
+            color="secondary"
+            size="small"
+            variant="contained"
+          >
+            <Link href={urls} target="_blank" rel="noopener">
+              Link
+            </Link>
+          </Button>
+          <Button className="buttonEdit" variant="contained" size="small">
+            Edit
+          </Button>
+          <Button
+            className="buttonDelete"
+            variant="contained"
+            size="small"
+            onClick={onDeleteClick}
+          >
+            Delete
+          </Button>
+        </CardActions>
+      </div>
+    </>
+  );
 }
 
 export default CardTableItem
