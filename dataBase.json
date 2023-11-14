@@ -9,18 +9,6 @@
       "logo": "logo",
       "urls": "https://mui.com/material-ui/react-link/",
       "id": 1695836510755
-    },
-    {
-      "logo": "blogging",
-      "urls": "http//:fack.com",
-      "urlProps": "http://localhost:3000/blogs/",
-      "id": 1695836510756
-    },
-    {
-      "logo": "My rest file",
-      "urls": "http//:fack.com",
-      "urlProps": "http://localhost:3000/blogs/",
-      "id": 1695836510757
     }
   ],
   "courses": [
@@ -126,11 +114,6 @@
       "urls": "https://hillel.co.ua"
     },
     {
-      "id": 14,
-      "logo": "hillel",
-      "urls": "https://hillel.co.ua"
-    },
-    {
       "logo": "skills",
       "urls": "http//:fack.com",
       "urlProps": "http://localhost:3000/skills/",
@@ -165,30 +148,6 @@
       "id": 18,
       "logo": "warcraft",
       "urls": "https://warcraft.co.usa"
-    },
-    {
-      "logo": "text",
-      "urls": "http//:fack.com",
-      "urlProps": "http://localhost:3000/text/",
-      "id": 19
-    },
-    {
-      "logo": "sony",
-      "urls": "https://sony.com.ua",
-      "urlProps": "http://localhost:3000/text/",
-      "id": 20
-    },
-    {
-      "logo": "Name Site",
-      "urls": "Url address",
-      "urlProps": "http://localhost:3000/text/",
-      "id": 21
-    },
-    {
-      "logo": "Name Site",
-      "urls": "Url address",
-      "urlProps": "http://localhost:3000/text/",
-      "id": 22
     }
   ]
 }
